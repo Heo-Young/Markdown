@@ -37,3 +37,53 @@ ALTER TABLE buytbl
     ADD CONSTRAINT buytbl_usertbl_fk FOREIGN KEY ( usertbl_username )
         REFERENCES usertbl ( username );
 ```
+
+## Oracle 유틸리티 사용법
+
+- SQLPlus
+```sql
+HELP INDEX
+-- SQLPlus 명령어 목록 확인
+DESCRIBE TABLE
+-- 테이블 구조를 보여준다. = DESC TABLE
+LIST
+-- 마지막 수행된 SQL문을 보여준다. = L
+RUN
+-- 마지막 SQL문을 다시 실행한다. = /
+DEL
+-- SQLPlus는 마지막 명령어를 버퍼(메모리)에 저장한다 DEL은 버터를 비운다.
+APPEND
+-- 버퍼 뒤에 명령어 추가
+REPLACE
+-- 새로운 명령어 덮어 쓰기
+SHOW USER
+-- 현재 사용자를 출력해 줌
+CONNECT HR/1234@XE
+-- HR 사용자로 접속
+COLUMN 열 이름 HEADING "출력이름" FORMAT 출력폭
+-- 출력되는 헤더(열 이름) 변경, 폭 조절
+SPOOL 파일경로
+SPOOL OFF
+-- 명령어 파일에 저장 시작, 종료
+```
+
+## PL/SQL 기본
+
+- SELECT 전체 구문 형식
+```sql
+WITH <Sub Query>
+SELECT select_list
+FROM table_source
+WHERE search_condition
+GROUP BY group_by_expression
+HAVING search_condition
+ORDER BY order_expression ASC : DESC
+```
+- SELECT 약식
+```sql
+SELECT 열 이름
+FROM 테이블 이름
+WHERE 조건
+```
+
+- WHERE
