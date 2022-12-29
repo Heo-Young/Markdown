@@ -72,12 +72,12 @@ SPOOL OFF
 - SELECT 전체 구문 형식
 ```sql
 WITH <Sub Query>
-SELECT select_list
+SELECT select_list -- DISTINCT
 FROM table_source
-WHERE search_condition
-GROUP BY group_by_expression
-HAVING search_condition
-ORDER BY order_expression ASC : DESC
+WHERE search_condition -- 조건연산자조건연산자(=, <, >, <=, >=, <>, !=)관계연산자(NOT, AND, OR 등), BETEWEEN ~~~ AND, IN(), LIKE, ANY, ALL, SOME, 서브쿼리, ROWNUM,
+GROUP BY group_by_expression -- 
+HAVING search_condition -- 집계 함수
+ORDER BY order_expression ASC : DESC 
 ```
 - SELECT 약식
 ```sql
@@ -86,4 +86,5 @@ FROM 테이블 이름
 WHERE 조건
 ```
 
-- WHERE
+
+-- ORDER BY 
